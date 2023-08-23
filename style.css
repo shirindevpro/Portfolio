@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+*{
+    font-family: "ropa sans";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #0c1022;
+}
+.header{
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+padding: 20px 10%;
+background:transparent;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+    
+}
+.navbar a{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: 500;
+    
+      
+}
+.navbar a.active,
+.navbar a:hover {
+    background: linear-gradient(45deg, #f06, #3cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+   
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    
+    padding: 70px 10% 0;
+    justify-content: space-between;
+}
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+
+}
+.home-content h3 {
+    font-size:  30px;
+    font-weight: 700;
+}
+.home-content {
+     
+     max-width: 500px;
+}
+.home-content p {
+    font-size: 15px;
+   line-height: 1.2;
+    margin: 20px 0 40px;
+}
+.btn{
+    display: inline-flex;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    color: #fff;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+   text-decoration: none;
+  
+   position: relative;
+   z-index: 1;
+    
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    z-index: -1;
+    background-size: 200%;
+    background-position: 100% 0;
+    transition: 0.5s;
+    background-size: 200%;
+  
+    border-radius: 20px;
+}
+.btn:hover::before {
+    background-position: 100% 0;
+}
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    z-index: -1;
+    background-size: 200%;
+    transition: 0.5s ease;
+    background-size: 200%;
+    filter: blur(5px);
+    border-radius: 20px;
+}
+.btn:hover::after {
+    background-position: 100% 0;
+}
+.home-si a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    text-decoration: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px 0;
+    z-index: 1;
+   
+}
+
+.home-si a::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    border-radius: 50%;
+    transform: scale(.90);
+    z-index: -1;
+    transition: .5s ease;
+}
+.home-si a:hover::before {
+   filter: blur(5px); 
+}
+.home-si a::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0c1022;
+    border-radius: 50%;
+    transform: scale(.90);
+    z-index: -1;
+    transition: .5s ease;
+}
+.home-si a:hover::after {
+    transform: scale(0);
+}
+.home-img{
+    width: 410px;
+    height: 410px;
+   
+}
+.home-img .glowing-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.home-img .glowing-circle::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: #0c1022;
+    border-radius: 50%;
+    z-index: -1;
+
+}
+
+.glowing-circle .image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    background: transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+.image img{
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+    max-width: 350px;
+    object-fit: cover;
+    border-radius: 80%;
+    overflow: hidden;
+   
+}
